@@ -5,7 +5,6 @@ import cn.rin.thinking.ioc.overview.dependency.domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
-import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.Map;
@@ -28,6 +27,8 @@ public class DependencyLookupDemo {
         lookupInLazy(beanFactory);
         // 根据类型查找
         lookupByType(beanFactory);
+        // 根据名称查找
+        lookupByName(beanFactory);
         // 按照类型查找集合对象
         lookupCollectionByType(beanFactory);
         // 根据注解查找集合对象
@@ -61,6 +62,14 @@ public class DependencyLookupDemo {
     private static void lookupByType(BeanFactory beanFactory) {
         User user = beanFactory.getBean(User.class);
         System.out.println("根据类型查找: " + user);
+    }
+
+    /**
+     * 根据名称查找
+     */
+    private static void lookupByName(BeanFactory beanFactory) {
+        User user = (User) beanFactory.getBean("user");
+        System.out.println("根据名称查找: " + user);
     }
 
     /**
