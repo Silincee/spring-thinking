@@ -8,8 +8,9 @@
         <property name="name" value="rin"/>
     </bean>
 
-    <bean id="rootUser" class="cn.rin.thinking.ioc.overview.dependency.domain.RootUser" parent="user">
-
+    <bean id="rootUser" class="cn.rin.thinking.ioc.overview.dependency.domain.RootUser" parent="user"
+          primary="true">
+        <property name="address" value="南京"/>
     </bean>
 
     <bean id="objectFactory" class="org.springframework.beans.factory.config.ObjectFactoryCreatingFactoryBean">

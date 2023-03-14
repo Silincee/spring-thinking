@@ -1,5 +1,6 @@
 package cn.rin.thinking.ioc.overview.dependency.lookup;
 
+import cn.rin.thinking.ioc.overview.annotation.Root;
 import cn.rin.thinking.ioc.overview.dependency.domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
@@ -29,7 +30,19 @@ public class DependencyLookupDemo {
         lookupByType(beanFactory);
         // 按照类型查找集合对象
         lookupCollectionByType(beanFactory);
-        // 根据注解查询
+        // 根据注解查找集合对象
+        lookupCollectionByAnnotationType(beanFactory);
+    }
+
+    /**
+     * 根据注解查找集合对象
+     */
+    private static void lookupCollectionByAnnotationType(BeanFactory beanFactory) {
+        if (beanFactory instanceof ListableBeanFactory) {
+            ListableBeanFactory listableBeanFactory = ((ListableBeanFactory) beanFactory);
+            Map<String, User> userList = (Map) listableBeanFactory.getBeansWithAnnotation(Root.class);
+            System.out.println("查找到的所有标注 @Root 的User的集合对象: " + userList);
+        }
     }
 
     /**
