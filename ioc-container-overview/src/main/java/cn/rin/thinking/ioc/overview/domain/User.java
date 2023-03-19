@@ -1,4 +1,4 @@
-package cn.rin.thinking.ioc.overview.dependency.domain;
+package cn.rin.thinking.ioc.overview.domain;
 
 import cn.rin.thinking.ioc.overview.annotation.Root;
 import com.oracle.tools.packager.IOUtils;

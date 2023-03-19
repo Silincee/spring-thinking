@@ -3,12 +3,12 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="user" class="cn.rin.thinking.ioc.overview.dependency.domain.User">
+    <bean id="user" class="cn.rin.thinking.ioc.overview.domain.User">
         <property name="id" value="1"/>
         <property name="name" value="rin"/>
     </bean>
 
-    <bean id="rootUser" class="cn.rin.thinking.ioc.overview.dependency.domain.RootUser" parent="user"
+    <bean id="rootUser" class="cn.rin.thinking.ioc.overview.domain.RootUser" parent="user"
           primary="true">
         <property name="address" value="南京"/>
     </bean>

@@ -1,7 +1,6 @@
-package cn.rin.thinking.ioc.overview.dependency.domain;
+package cn.rin.thinking.ioc.overview.domain;
 
 import lombok.Data;
-import org.springframework.context.annotation.Bean;
 
 /**
  * root用户

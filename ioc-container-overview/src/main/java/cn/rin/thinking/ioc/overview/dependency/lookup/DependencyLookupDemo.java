@@ -1,7 +1,7 @@
 package cn.rin.thinking.ioc.overview.dependency.lookup;
 
 import cn.rin.thinking.ioc.overview.annotation.Root;
-import cn.rin.thinking.ioc.overview.dependency.domain.User;
+import cn.rin.thinking.ioc.overview.domain.User;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.beans.factory.ListableBeanFactory;
 import org.springframework.beans.factory.ObjectFactory;
@@ -20,7 +20,7 @@ public class DependencyLookupDemo {
     public static void main(String[] args) {
         // 配置 XML 配置文件
         // 启动 Spring 应用上下文
-        ClassPathXmlApplicationContext beanFactory = new ClassPathXmlApplicationContext("classpath:META-INF/denpency-lookup-context.xml");
+        ClassPathXmlApplicationContext beanFactory = new ClassPathXmlApplicationContext("classpath:META-INF/dependency-lookup-context.xml");
         // 实时查找
         lookupInRealTime(beanFactory);
         // 延时查找
