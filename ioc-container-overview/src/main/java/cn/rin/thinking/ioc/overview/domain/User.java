@@ -1,13 +1,11 @@
 package cn.rin.thinking.ioc.overview.domain;
 
 import cn.rin.thinking.ioc.overview.annotation.Root;
-import com.oracle.tools.packager.IOUtils;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
-import java.io.FileInputStream;
-import java.io.FileNotFoundException;
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.io.Serializable;
 
 /**
  * @author zhongye
@@ -15,7 +13,9 @@ import java.util.HashMap;
  */
 @Data
 @Root
-public class User {
+@AllArgsConstructor
+@NoArgsConstructor
+public class User implements Serializable{
 
     private String name;
 
